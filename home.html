@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex justify-center">               
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- avaiable monay -->
+                 <div>
+                    <div class="stats shadow">
+                        <div class="stat">
+                          <div class="stat-value" id="account-balance">9400</div>
+                          <div class="stat-desc">Available Money</div>
+                        </div>
+                      </div>
+                 </div>
+                 <div class="divider"></div>
+                 <!-- user action button  -->
+                  <div>
+                    <button id="show-add-money" class="btn btn-lg">Add Money</button>
+                    <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
+                    <button id="transaction-btn" class="btn btn-lg mt-2">Transaction</button>
+                  </div>
+                  <div class="divider"></div>
+                  <!-- add monay form start here  -->
+                  <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input type="text" id="input-add-money" placeholder="Amount" class="input input-bordered"  />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="input-pin-number" type="password" autocomplete="off" placeholder="Your Pin" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary" id="btn-add-money">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                   <!-- add monay form end here  -->
+                    <!-- cast out start here  -->
+                    <div id="cash-out-form" class="hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount</span>
+                            </label>
+                            <input type="text" id="input-cast-out" placeholder="Cash Out Money" class="input input-bordered"  />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin</span>
+                            </label>
+                            <input id="input-cash-out-pin" type="password" autocomplete="off" placeholder="Your Pin" class="input input-bordered" required />
+                            
+                          </div>
+                          <div class="form-control mt-6">
+                            <button class="btn btn-primary" id="btn-cash-out-money">Cash Out</button>
+                          </div>
+                        </form>
+                      </div>
+                     <!-- cast-out end here  -->
+                      <!-- transaction start here -->
+                       <div id="transaction-section" class="hidden">
+                        <h2 class="text-4xl text-center">Transaction History</h2>
+                        <div id ="container" class="space-y-3">
+                        
+                        </div>
+                       </div>
+                       
+                       <!-- transaction end here  -->
+              </div>
+            </div>
+          </div>                
+    </main>
+    <script src="./js/function.js"></script>
+    <script src="./js/home.js"></script>
+    <!-- <script src="./js/cashout.js"></script> -->
+</body>
+</html>
